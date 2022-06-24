@@ -22,6 +22,7 @@
       });
     } else {
       isActive = false;
+      selectedItemIndex = undefined;
     }
   }
   const selectItem = (i) => {
@@ -45,11 +46,13 @@
   };
 </script>
 
-<Menu isWidgetActive={isWidgetActive}/>
+<Menu {isWidgetActive} />
 
 <main>
-  <section class="search-section"  class:inactive={isWidgetActive}>
-    <h1 class="search-section__search-header"><strong>start</strong>&nbsp;<span>here</span></h1>
+  <section class="search-section" class:inactive={isWidgetActive}>
+    <h1 class="search-section__search-header">
+      <strong>start</strong>&nbsp;<span>here</span>
+    </h1>
     <form class="search-section__search" on:submit|preventDefault={doSearch}>
       <input
         class="search-section__search-box"
