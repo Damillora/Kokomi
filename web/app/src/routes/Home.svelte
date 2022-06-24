@@ -17,7 +17,7 @@
         if (items.length > 0) {
           selectedItemIndex = 0;
         } else {
-          selectedItem = undefined;
+          selectedItemIndex = undefined;
         }
       });
     } else {
