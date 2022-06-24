@@ -1,0 +1,15 @@
+.widget-section {
+  background-color: var(--primary-color);
+  color: var(--primary-bg-color);
+  text-align: center;
+  flex-grow: 1;
+}
+
+.widget-area {
+  overflow: hidden;
+}
+.widget-collapse {
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
