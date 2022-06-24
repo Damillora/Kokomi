@@ -22,6 +22,7 @@
       });
     } else {
       isActive = false;
+      autocompleteItems = [];
       selectedItemIndex = undefined;
     }
   }
@@ -71,8 +72,8 @@
           <a
             href={item.url}
             class="search-section__autocomplete-item"
-            class:selected={item.url ==
-              autocompleteItems[selectedItemIndex].url}
+            class:selected={selectedItemIndex != undefined &&
+              item.url == autocompleteItems[selectedItemIndex].url}
             on:mouseenter={() => selectItem(i)}
           >
             <span class="material-icons search-section__autocomplete-icon"
